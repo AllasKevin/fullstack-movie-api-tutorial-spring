@@ -13,6 +13,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 public class Review {
     @Id
-    private ObjectId id;
+    private ObjectId id; // ObjectId will be auto-generated on creation of a new object
     private String body;
+
+    public Review(String body) {
+        this.body = body;
+    }
 }

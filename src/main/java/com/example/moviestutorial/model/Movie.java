@@ -15,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Movie {
     @Id
-    private ObjectId id;
+    private ObjectId id; // ObjectId will be auto-generated on creation of a new object
     private String imdbId;
     private String title;
     private String releaseDate;
