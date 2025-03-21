@@ -22,6 +22,10 @@ public class MovieService {
                 .map(Movie::getTitle)
                 .forEach(title -> System.out.println("Movie title: " + title)); // ✅ Print titles
 
+        movies.stream()
+                .map(Movie::getReviewIds)
+                .forEach(reviewId -> System.out.println("reviewId: " + reviewId));
+
         return movies; // ✅ Return the same list fetched
     }
 
