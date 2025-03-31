@@ -1,4 +1,4 @@
-/*package com.example.moviestutorial.config;
+package com.example.moviestutorial.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -20,4 +20,4 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:/static/");
     }
-}*/
+}

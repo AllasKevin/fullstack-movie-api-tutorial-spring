@@ -24,16 +24,17 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .exceptionHandling().authenticationEntryPoint(userAuthenticationEntryPoint)
-                .and()
-                .addFilterBefore(new JwtAuthFilter(userAuthenticationProvider), BasicAuthenticationFilter.class)
-                .csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .authorizeHttpRequests((requests) -> requests
+                //.exceptionHandling().authenticationEntryPoint(userAuthenticationEntryPoint)
+                //.and()
+                //.addFilterBefore(new JwtAuthFilter(userAuthenticationProvider), BasicAuthenticationFilter.class)
+                //.csrf().disable()
+                //.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                //.and()
+                .authorizeRequests(/*(requests) -> requests
                         .requestMatchers(HttpMethod.POST, "/login", "/register").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/v1/movies", "/").permitAll()
-                        .anyRequest().authenticated());
+                        .anyRequest().authenticated()*/)//.        antMatchers("/api/v1/movies").permitAll()
+        ;
         return http.build();
     }
 

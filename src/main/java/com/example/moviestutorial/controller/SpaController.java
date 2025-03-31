@@ -1,4 +1,4 @@
-/*package com.example.moviestutorial.controller;
+package com.example.moviestutorial.controller;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -25,4 +25,3 @@ public class SpaController {
                 .body(resource);
     }
 }
-*/
